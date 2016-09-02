@@ -1,0 +1,42 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background: url("images/bg4.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    padding-top: 2%;
+    display: table;
+    margin: 0 auto;
+    font-size: 300%;
+}
+
+h2 {
+    padding-top: 4%;
+    display: table;
+    margin: 0 auto;
+    font-size: 250%;
+}
+
+h3 {
+    padding-top: 4%;
+    display: table;
+    margin: 0 auto;
+    padding: 0 10%;
+    font-size: 200%;
+    text-align: center;
+}
+
+#clock {
+    padding-top: 2%;
+    display: table;
+    margin: 0 auto;
+    font-size: 800%;
+    color: black;
+}
