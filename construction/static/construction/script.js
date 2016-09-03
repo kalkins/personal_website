@@ -49,12 +49,19 @@ function get_diff(date) {
     return [days_string, hours_string, minutes_string, seconds_string, days, hours, minutes, seconds];
 }
 
+function print(days, hours, minutes, seconds) {
+    $("#days").text(days);
+    $("#hours").text(hours);
+    $("#minutes").text(minutes);
+    $("#seconds").text(seconds);
+}
+
 function rewind() {
     if (speed < 2000000) {
         speed = speed*(1.01 + speed/50000);
     }
-    var diff = get_diff(current)
-    $("#clock").text(diff[0]+":"+diff[1]+":"+diff[2]+":"+diff[3]);
+    var diff = get_diff(current);
+    print(diff[0], diff[1], diff[2], diff[3]);
     if (current.diff(date, "milliseconds") < -speed) {
         current.add(speed, "milliseconds");
         window.setTimeout(rewind, 50);
@@ -73,7 +80,7 @@ $(document).ready(function() {
     window.setInterval(function() {
         if (!rewinding) {
             var diff = get_diff(date);
-            $("#clock").text(diff[0]+":"+diff[1]+":"+diff[2]+":"+diff[3]);
+            print(diff[0], diff[1], diff[2], diff[3]);
 
             if (diff[4] <= 0 && diff[5] <= 0 && diff[6] <= 0 && diff[7] <= 0) {
                 rewinding = true;

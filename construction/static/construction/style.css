@@ -33,10 +33,18 @@ h3 {
     text-align: center;
 }
 
-#clock {
+#clock_wrapper {
     padding-top: 2%;
     display: table;
     margin: 0 auto;
+}
+
+.clock, .colon {
     font-size: 800%;
     color: black;
+}
+
+.colon {
+    position: relative;
+    top: -0.14em;
 }
