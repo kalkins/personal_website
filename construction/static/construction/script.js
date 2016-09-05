@@ -5,9 +5,9 @@ function calc_date() {
             date.add(2, "days");
         }
     } else if (date.date() > 30) {
-        date.add(1, "month").date(10);
+        date.add(1, "month").date(2);
     } else {
-        date.date(2);
+        date.add(1, "days");
     }
     date.hours(12).minutes(0).seconds(0).milliseconds(0);
 
